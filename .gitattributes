@@ -1,0 +1,15 @@
+*.sln crlf
+*.csproj crlf
+*.cs crlf diff=csharp
+
+*.md crlf
+
+*.cmd crlf
+*.msbuild crlf
+*.xml crlf
+*.nuspec crlf
+*.ps1 crlf
+
+.gitattributes crlf
+
+*.sh eol=lf
