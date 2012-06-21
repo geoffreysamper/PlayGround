@@ -1,0 +1,24 @@
+﻿<%@  Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <script type="text/javascript" src="<%= Url.Content("~/scripts/jquery-1.5.1.min.js") %>">
+    </script>
+    <link href="<%=Url.Content("~/content/Site.css")%>" rel="stylesheet" type="text/css"
+        media="screen;projection" />
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="/Home/index">Overview</a> </li>
+        <li><a href="/Home/SqlInjection">Sql injection</a> </li>
+        <li><a href="/Home/Xss">Xss</a></li>
+        <li><a href="/Home/AntiXss">Anti Xss library</a></li>
+        <li><a href="/MassAssignment/Index">Mass assignment</a></li>
+        <li><a href="/MassAssignment/Badguy">Mass assignment (bad guy)</a></li>
+    </ul>
+    <div>
+        <asp:ContentPlaceHolder ID="Content" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>
