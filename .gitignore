@@ -1,5 +1,6 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 *resharper.user
+*.DotSettings
 [Dd]ebug/
 [Rr]elease/
 build/
