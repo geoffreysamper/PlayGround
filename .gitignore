@@ -13,3 +13,5 @@ _ReSharper.*/
 *.user
 # mstest test results
 TestResults
+*.[mM][dD][fF]
+*.[Ll][Dd][Ff]

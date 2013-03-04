@@ -22,21 +22,13 @@ namespace AspnetCompilationMode
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            ViewEngines.Engines.Clear();
+           ViewEngines.Engines.Clear();
             
-            ViewEngines.Engines.Add(new MyWebFormViewEngine());
+        ViewEngines.Engines.Add(new MyWebFormViewEngine());
         }
 
-        protected void Application_End()
-        {
-         
-            var a = HostingEnvironment.ShutdownReason;
-            
-
-            File.WriteAllText("c:\\temp\\" +typeof(MvcApplication).FullName + " " + a.ToString() +" " + DateTime.Now.Ticks + "txt", a.ToString());
-
+        protected void Application_End(){
         }
-
     }
 
 }
