@@ -27,4 +27,6 @@ So how can we avoid this by adding a compilationmode and set it to never to a pa
 The change is located MyBuildManagerView at line 53. If we cannot find a compile type then we try 
 to create the page by calling the BuildManager.CreateInstanceFromVirtualPath method.
 
+Please look at the events logged in the aspnet.mdf located under the app_data folder. The database contains a table aspnet_WebEvent_Events.
+
 
