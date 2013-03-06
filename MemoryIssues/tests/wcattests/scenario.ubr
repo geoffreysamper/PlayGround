@@ -1,0 +1,64 @@
+scenario
+{
+    name    = "json";
+    warmup      = 30;
+    duration    = 180;
+    cooldown    = 10;
+    default
+    {
+        setheader
+        {
+            name    = "Host";
+            value   = "localhost";
+        }
+        setheader
+        {
+            name    = "Connection";
+            value   = "keep-alive";
+        }
+ 
+        setheader
+        {
+            name    = "User-Agent";
+			value   = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5";
+        }
+        version     = HTTP11;
+        close       = ka;
+    }
+		
+	transaction
+    {
+        id = "badjson";
+        weight = 100;
+ 
+        request
+        {
+            url         = "/memoryissues/badjson.ashx";
+            statuscode  = 200;
+        }
+    }
+
+    transaction
+    {
+        id = "goodjson" ;
+        weight = 1200;
+ 
+        request
+        {
+            url         = "/memoryissues/goodjson.ashx";
+            statuscode  = 200;
+        }
+    }
+
+    transaction
+    {
+        id = "original sport crop" ;
+        weight = 100;
+ 
+        request
+        {
+            url         = "/Assets/Images_Upload/2013/01/13/sportlaureaten_01.jpg.938.jpg?crop=(1,1,100,100)";
+            statuscode  = 200;
+        }
+    }
+}

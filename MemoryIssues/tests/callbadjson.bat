@@ -1,2 +1,2 @@
-tinyget -srv:localhost -r:65029 -uri:/badjson.ashx -threads:5 -loop:1000
+tinyget -h -srv:localhost -r:80 -uri:/memoryissues/badjson.ashx -threads:9 -loop:1000 -status:200
 Pause

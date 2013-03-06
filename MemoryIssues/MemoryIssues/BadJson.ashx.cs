@@ -12,6 +12,7 @@ namespace MemoryIssues
     /// </summary>
     public class BadJson : IHttpHandler
     {
+        static Lazy<IEnumerable<City>> _lazy = new Lazy<IEnumerable<City>>(CreateGetAll);
 
         public void ProcessRequest(HttpContext context)
         {
@@ -29,11 +30,12 @@ namespace MemoryIssues
 
         }
 
-        public static IEnumerable<City> GetAll()
+        public static IEnumerable<City> GetAll() { return _lazy.Value; }
+        private static IEnumerable<City> CreateGetAll()
         {
-            for(int index =0; index <10000;index++)
+            for(int index =0; index <2000;index++)
             {
-                yield return new City(index, "cityname");
+                yield return new City(index, "cit".PadRight(1000,'a'));
             }
 
         }

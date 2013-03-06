@@ -1,0 +1,5 @@
+settings
+{
+    server = "localhost";
+	virtualclients = 100;
+}

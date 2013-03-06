@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Fiddler Demo";
+}
+
+<h2>@ViewBag.Title</h2>
+<div id="container"></div>
+<button id="button">click me</button>
+
+@section scripts {
+    <script src="@Url.Content("~/scripts/scriptexample.js")"></script>
+}
+
