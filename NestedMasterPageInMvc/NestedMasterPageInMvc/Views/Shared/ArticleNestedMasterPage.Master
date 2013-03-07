@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" MasterPageFile="MainMasterPage.Master" %>
+
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    <div style="margin-left: auto; margin-right: auto; width: 800px">
+        <div style="float: left">
+            <asp:ContentPlaceHolder runat="server" ID="LeftContent">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="float: right;">
+            <asp:ContentPlaceHolder runat="server" ID="RightContent">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
