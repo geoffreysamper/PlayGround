@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8A5000CD-033E-4A3D-969C-8DDF95B21056}</ProjectGuid>
+    <ProjectGuid>{513B4345-F2DB-4FC7-A47D-AA2F30D40556}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspnetCompilationMode</RootNamespace>
-    <AssemblyName>AspnetCompilationMode</AssemblyName>
+    <RootNamespace>NestedMasterPageInMvc</RootNamespace>
+    <AssemblyName>NestedMasterPageInMvc</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -104,15 +104,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionControl.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="ControlRecompilations.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MyBuildManagerView.cs" />
-    <Compile Include="MyWebFormView.cs" />
-    <Compile Include="MyWebFormViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,10 +115,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
-    <Content Include="RecompilesOnChange.aspx" />
-    <Content Include="Views\Home\Html.ascx" />
-    <Content Include="Views\Home\WidgetAction.ascx" />
-    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\View1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,10 +128,15 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Help\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MainMasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ArticleNestedMasterPage.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -157,7 +154,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>38391</DevelopmentServerPort>
+          <DevelopmentServerPort>2229</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
