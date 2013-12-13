@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>WebApp.Dev</id>
+    <version>1.0</version>
+    <authors>Geoffrey Samper</authors>
+    <owners>Geoffrey Samper</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+  </metadata>
+</package>
