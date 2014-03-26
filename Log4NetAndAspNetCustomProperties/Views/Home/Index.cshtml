@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hows the content of the log</h2>
+
+<button></button>
+
+
+<iframe name="fr" id="fr" width="100%" height="800" src="@Url.Content("~/Home/FormatXml")" ></iframe>
+<script>
+    //window.setInterval("reloadIFrame();",10000);
+
+    function reloadIFrame() {
+        document.getElementById("fr").src = "/Home/FormatXml?d=" + new Date().toUTCString();
+    }
+
+</script>
