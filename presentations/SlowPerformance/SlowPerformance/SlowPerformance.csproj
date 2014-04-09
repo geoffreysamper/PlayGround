@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="randomtext.txt" />
+    <Compile Include="AsyncAwait.ashx.cs">
+      <DependentUpon>AsyncAwait.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BadFileAccess.ashx.cs">
+      <DependentUpon>BadFileAccess.ashx</DependentUpon>
+    </Compile>
     <Compile Include="cities.ashx.cs">
       <DependentUpon>cities.ashx</DependentUpon>
     </Compile>
@@ -146,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\cities.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BadFileAccess.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AsyncAwait.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

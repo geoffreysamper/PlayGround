@@ -22,6 +22,13 @@ namespace SlowPerformance
    
         public void ProcessRequest(HttpContext context)
         {
+            string dumstring = "";
+            for (int index = 0; index < 10000; index++)
+            {
+                dumstring += index;
+            }
+
+
             string content  = System.IO.File.ReadAllText(context.Server.MapPath("~/app_data/cities.json"));
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();

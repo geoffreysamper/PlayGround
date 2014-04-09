@@ -1,0 +1,25 @@
+var selenium = browserMob.openBrowser();
+var c = browserMob.getActiveHttpClient();
+
+var timeout = 30000;
+selenium.setTimeout(timeout);
+
+var tx = browserMob.beginTransaction();
+
+var step = browserMob.beginStep("Go to homepage");
+
+selenium.open("http://www.showslow.com");
+selenium.waitForPageToLoad(timeout);
+
+browserMob.endStep();
+browserMob.beginStep("Go to list");
+
+var listUrl = "http://www.showslow.com/list.php?id=alexa"
+selenium.open(listUrl);
+browserMob.endStep();
+browserMob.beginStep("Go to blog " );
+selenium.open("http://www.showslow.com/blog/");
+selenium.waitForPageToLoad(timeout);
+browserMob.endStep(); 
+
+browserMob.endTransaction();
