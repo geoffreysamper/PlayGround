@@ -16,3 +16,4 @@ _ReSharper.*/
 TestResults
 *.[mM][dD][fF]
 *.[Ll][Dd][Ff]
+*.exe
